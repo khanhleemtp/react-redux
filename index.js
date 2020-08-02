@@ -1,6 +1,7 @@
 const redux = require('redux');
 
 const createStore = redux.createStore;
+const combineReducers = redux.combineReducers;
 
 // action
 // action creator is a func return object
@@ -57,7 +58,11 @@ const iceCreamReducer = (state = initialIceCreamState, action) => {
 }
 
 // store
-const store = createStore(reducer);
+const rootReducer = combineReducers({
+    cake: cakeReducer,
+    iceCream: iceCreamReducer
+});
+const store = createStore(rootReducer);
 console.log('Inital State', store.getState());
 
 const unsubscribe = store.subscribe(() => console.log('Updated', store.getState()));
