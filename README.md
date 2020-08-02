@@ -94,6 +94,44 @@
  # Sell ice creams!
  # Ice Creams stored in the freezer
  # New Shopkeeper to handle BUY_ICECREAM from customer
- 
-      
+
+# ============================= 9, Multiple Reducers ===========================
+
+# ============================= 10, Combine Reducers ===========================
+# const combineReducers = redux.combineReducers;
+# const rootReducers = combineReducers({
+#    cake: cakeReducer,
+#    iceCream: iceCreamReducer
+# })
+
+# ============================== 11, Middleware ==============================
+# is the suggested way to extend Redux with custom functionality
+# Provides a third-party extension point between dispatching an action, and the
+# moment it reaches the reducer
+# Use middleware for logging, crash reporting, performing asynchonous tasks etc
+# const applyMiddleware = redux.applyMiddleware;
+# const store = createStore(rootReducer, applyMiddleware([...]))
+
+# ============================ 12, Async actions =============================
+# Sync actions As soon as action was dispatched, the state was immediately updated
+# Vd BUY_CAKE , numOfCake - 1
+# Async : Async API call to fetch data from end point and use that data in your app
+# State = {
+    loading: true,
+    data: [],
+    error: ''
+}
+# Loading: Display a loading spinner in your component
+# Data: list of users
+# error: error
+
+# Action
+# FETCH_USER_REQUEST - Fetch list of users
+# FETCH_USER_SUCCESS - Fetched successfully
+# FETCH_USER_FAILURE - Error fetching the data
+
+# Reducers
+# case: FETCH_USER_REQUEST loading: true
+# case: FETCH_USER_SUCCESS loading: false, users: data(from API)
+# case: FETCH_USER_FAILURE loading: false, errors: errors (from API)
 
