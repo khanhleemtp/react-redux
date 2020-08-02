@@ -86,4 +86,14 @@
    # Registers listeners via subcrible(listener)
    # Handles unregistering of listenes via the function return  by subcribles(listener)
 
+# ============================ 8, Cakes and Ice Creams ========================
+ # Cake shop
+  # Cakes stored on the shelf
+  # Shopkeeper to handle BUY_CAKE from customer
+
+ # Sell ice creams!
+ # Ice Creams stored in the freezer
+ # New Shopkeeper to handle BUY_ICECREAM from customer
+ 
+      
 
