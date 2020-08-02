@@ -77,3 +77,13 @@
  # Hàm chấp nhận 2 tham số là action, state và trả về state mới trong app
  # (prevState, action) => newState
 
+ # =========================== 7, Stores ======================================
+ # One store for entire app
+ # Responsibilities
+   # Holds app state
+   # Allow access to state via getState()
+   # Allow state to be updated via dispatch(action)
+   # Registers listeners via subcrible(listener)
+   # Handles unregistering of listenes via the function return  by subcribles(listener)
+
+
