@@ -12,18 +12,45 @@ function buyCake() {
     }
 }
 
+const BUY_ICECREAM = 'BUY_ICECREAM';
+function buyIceCream() {
+    return {
+        type: BUY_ICECREAM,
+        payload: 'Two Action'
+    }
+}
+
 // reducers
 //  (prevState, action) => newState
 
-const initialState = {
-    numofCakes: 10, 
+// const initialState = {
+//     numOfCakes: 10,
+//     numOfIceCreams: 20 
+// }
+
+const initialCakeState = {
+    numOfCakes: 10,
 }
 
-const reducer = (state = initialState, action) => {
+const initialIceCreamState = {
+    numOfIceCreams: 20,
+}
+
+const cakeReducer = (state = initialCakeState, action) => {
     switch(action.type) {
         case BUY_CAKE: return {
             ...state, 
-            numofCakes: state.numofCakes - 1
+            numOfCakes: state.numOfCakes - 1
+        }
+        default: return state;
+    }
+}
+
+const iceCreamReducer = (state = initialIceCreamState, action) => {
+    switch(action.type) {
+        case BUY_ICECREAM: return {
+            ...state, 
+            numOfIceCreams: state.numOfIceCreams - 1
         }
         default: return state;
     }
@@ -38,5 +65,7 @@ const unsubscribe = store.subscribe(() => console.log('Updated', store.getState(
 store.dispatch(buyCake());
 store.dispatch(buyCake());
 store.dispatch(buyCake());
-
-unsubscribe();
+store.dispatch(buyIceCream());
+store.dispatch(buyIceCream());
+store.dispatch(buyIceCream());
+unsubscribe();  
