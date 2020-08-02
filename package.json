@@ -1,0 +1,14 @@
+{
+  "name": "react-redux-1",
+  "version": "1.0.0",
+  "description": "===============Introduction===========================\r - Redux quản lí state\r     + Trong React, redux stores the states container\r - State có thể dự đoán được\r     + The state of application can change: \r         # todo list app - item (pending) -> item(completed)\r         # Chúng ta có thể theo dõi chuyển hướng đó \r         # Làm ứng dụng dễ quản lí\r - Là thư viện riêng của JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
+}
