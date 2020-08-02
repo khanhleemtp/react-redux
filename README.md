@@ -157,8 +157,62 @@
 # 2 const mapDispatchToProps = dispatch => { return { buyCake: () => dispatch(buyCake())}}
 # 3 connect : HOC export default connect(mapDispatchToProps, mapDispatchToProps)(CakeContainer);
 
-# ======================19 React Redux with HOOK =========================
+# ====================== 19 React Redux with HOOK =========================
 # React Redux pattern
 # Action creators, reducers, provide the store and connect the componnents
 # Components can access state and dispatch to props
 # Subcribe to store and dispatch actions without connect()
+
+# ====================== 20 Use Selector Hook  ======================
+# useSelector(state => state.numOfCake ) 
+
+# ====================== 21 Use Dispatch Hook ========================
+# const dispatch = useDispatch()
+
+# ====================== 22 Cake and IceCreams ========================
+# rootReducer, combineReducer({ cake: cakeReducer, ... })
+
+# ====================== 23 Logger =====================================
+# redux-logger, applyMiddleware
+
+# ====================== 24 Redux Dev Tool =============================
+# npm install --save redux-devtools-extension
+# import { composeWithDevTools } from 'redux-devtools-extension';
+# const store = createStore(reducer, composeWithDevTools(
+#  applyMiddleware(...middleware),
+#  // other store enhancers if any
+# ));
+
+# ====================== 25 Action payload ================================
+# const[number, setNumber] = useState(1); 
+# onClick={ () => props.buyCake(number)
+# action.payload = number
+
+# ====================== 26 mapStateToProps ================================
+# const mapStateToProps = (state, ownProps) => {
+#    const itemState = ownProps.cake ? state.cake.numOfCakes : state.iceCream.numOfIceCreams
+#    return {
+#        item: itemState
+#    }
+# }
+# Parent: 
+# <ItemContainer cake>
+# <ItemContainer >
+
+# ====================== 27 mapDispatchToProps ================================
+
+# const mapDispatchToProps = (dispatch, ownProps) => {
+#    const dispatchFunction = ownProps.cake ? 
+#    ()  => dispatch(buyCake()) :
+#    () => dispatch(buyIceCream());
+#    return {
+#        buyItem: dispatchFunction
+#    }
+# }
+
+# export default connect(null, mapDispatchToProps)(ItemContainer);
+
+# ========================= 28 Async Action ====================================
+
+
+# ========================= 29 Redux-thunk Get Request ========================
