@@ -145,4 +145,20 @@
 #           ^                                          ^ 
 #           Redux Store(State)<----->Reducer-------> Action
 
+# ==================== 15 action: Action, Type ========================
+#  ====================16 reducers: Function ==========================
+#  ====================17 store: ======================================
+  #  import {createStore} from 'redux'
+  # App.js import { Provider } from 'react-redux'
 
+# ==================== 18 connect =====================================
+# 3 Step
+# 1 const mapStateToProps = state => { return { numOfCake: state.numOfCake } }
+# 2 const mapDispatchToProps = dispatch => { return { buyCake: () => dispatch(buyCake())}}
+# 3 connect : HOC export default connect(mapDispatchToProps, mapDispatchToProps)(CakeContainer);
+
+# ======================19 React Redux with HOOK =========================
+# React Redux pattern
+# Action creators, reducers, provide the store and connect the componnents
+# Components can access state and dispatch to props
+# Subcribe to store and dispatch actions without connect()
