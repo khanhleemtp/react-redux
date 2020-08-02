@@ -36,11 +36,33 @@
         + Shopkeeper: * Remove a cake from the self
                       * Recept to keep track
 # Three Core Concepts contd
-    - Cake Shop Scenario   - Redux             - Purpose
-    Shop                   Store                 Holds the state of your app
-    Intention to BUY_CAKE  Action                Describes what happened
-    Shopkeeper             Reducer               Ties the store and actions together
+- Cake Shop Scenario        - Redux          - Purpose
+    + Shop                   Store           Holds the state of your app
+    + Intention to BUY_CAKE  Action          Describes what happened
+    + Shopkeeper             Reducer         Ties the store and actions together
 
 # A store that holds the state of the app
 # A action that describes the changes in the state of the application
 # A reducer which actually carries out the state transtion depending on the action
+
+# ============= Three principles =================================
+# Redux
+# 1 The state of your app is stored in an obj tree with a single store
+- Store: 1 Single Object which would be managed by Redux Store: Ex: {
+    numOfCakes: 3
+}
+# 2 The only way to change is to emit an action, an object describing what happened
+- Action: Cake shop: Let the shopkeeper know about our action {
+    type: BUY_CAKES
+}
+
+# 3 To specify how the state tree is transformed by actions, you write pure reducers
+- Reducer: Shopkeeper
+       + (prevState, action) => NewState
+       + function dạng switch case
+
+#           ---Subcrible---------JS App------dispatch---
+#           ^                                          ^ 
+#           Redux Store(State)<----->Reducer-------> Action
+
+
