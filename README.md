@@ -1,4 +1,4 @@
-# ==============Introduction===========================
+# ==============1, Introduction===========================
 
 # Redux quản lí state
     - Trong React, redux stores the states container
@@ -24,7 +24,7 @@
     - React-redux is a library that prodvides bindings to use React and React
         together in an application
 
-# ===================== Three Core Concept ==============
+# ===================== 3, Three Core Concept ==============
 # Ex: Cake shop
     - Entities: 
         + Shop: Stores cakes on a shelf
@@ -45,7 +45,7 @@
 # A action that describes the changes in the state of the application
 # A reducer which actually carries out the state transtion depending on the action
 
-# ============= Three principles =================================
+# ============= 4, Three principles =================================
 # Redux
 # 1 The state of your app is stored in an obj tree with a single store
 - Store: 1 Single Object which would be managed by Redux Store: Ex: {
@@ -65,4 +65,9 @@
 #           ^                                          ^ 
 #           Redux Store(State)<----->Reducer-------> Action
 
-
+# ===========================5, Action======================================
+ # Tương tác trực tiếp với store
+ # Mang thông tin từ app đến store
+ # Object đơn giản
+ # type property chỉ định loại hành động được thực thi
+ # type property thường định nghĩa 1 hằng số kiểu Strings
