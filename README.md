@@ -135,7 +135,14 @@
 # case: FETCH_USER_SUCCESS loading: false, users: data(from API)
 # case: FETCH_USER_FAILURE loading: false, errors: errors (from API)
 
-# ===============================13-redux thunk middleware=====================
+# ======================== 13-redux thunk middleware=====================
 # axios request to an API end point
 # redux-thunk : Define async action creator, middleware
 # redux-thunk cho phép action creator trả về 1 function
+
+# ====================== 14, react-redux-setup =========================
+#           ---Subcrible---------JS App------dispatch---
+#           ^                                          ^ 
+#           Redux Store(State)<----->Reducer-------> Action
+
+
