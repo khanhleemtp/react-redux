@@ -65,9 +65,15 @@
 #           ^                                          ^ 
 #           Redux Store(State)<----->Reducer-------> Action
 
-# ===========================5, Action======================================
+# ===========================5, Action ======================================
  # Tương tác trực tiếp với store
  # Mang thông tin từ app đến store
  # Object đơn giản
  # type property chỉ định loại hành động được thực thi
  # type property thường định nghĩa 1 hằng số kiểu Strings
+
+ # ========================== 6, Reducers =====================================
+ # Chỉ định trạng thái thay đổi ntn khi phản hồi actions và gửi đến store
+ # Hàm chấp nhận 2 tham số là action, state và trả về state mới trong app
+ # (prevState, action) => newState
+
